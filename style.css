@@ -45,3 +45,11 @@ body {
   border-color: var(--bs-info);
 }
 
+.fixed-img-height {
+  height: 200px;
+    object-fit: cover;
+}
+
+.text-slate {
+  color: #1d3557;
+}
