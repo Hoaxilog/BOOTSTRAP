@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.7.2-web//css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <header class="navigation">
+      <nav class="container navbar navbar-expand-lg p-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+          <div class="flex align-items-center">
+            <img
+              src="./assets/logo.png"
+              alt="logo"
+              class="image-fluid w-5"
+              style="width: 100px; height: auto"
+            />
+            <a class="navbar-brand text-white fw-bold" href="#"> </a>
+          </div>
+          <button
+            class="navbar-toggler border-light"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" style="filter: brightness"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav fs-5 text-uppercase mx-auto">
+              <li class="nav-item">
+                <a
+                  class=" nav-link active text-white"
+                  aria-current="page"
+                  href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Programs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Volunteer</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="about.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#contact">Contact</a>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-lg bg-white text-dark px-4" data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN</button>            
+           
+            <!-- MY MODAL FOR LOGIN -->
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content shadow-lg border-0 rounded-4" style="max-width: 500px; margin: auto;">
+                  <div class="modal-header bg-danger text-white rounded-top-4">
+                    <h5 class="modal-title"><i class="fas fa-sign-in-alt me-2"></i>Login</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body px-5 py-4">
+                    
+                    <form class="text-start">
+                      <div class="mb-3">
+                        <label for="loginUsername" class="form-label">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
+                          <input required type="text" class="form-control" id="loginUsername" placeholder="Enter your username">
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light"><i class="fas fa-lock"></i></span>
+                          <input required type="password" class="form-control" id="loginPassword" placeholder="••••••••">
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="rememberMe">
+                          <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                      </div>
+                      <button type="submit" class="btn btn-primary w-100 mb-2">Login</button>
+                      <button type="button" class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                    </form>
+            
+                    <div class="text-center my-3 text-muted">
+                      <span>or</span>
+                    </div>
+            
+                    <div class="d-flex justify-content-center gap-3">
+                      <button class="btn btn-outline-primary rounded-circle" style="width: 48px; height: 48px;" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                      </button>
+                      <button class="btn btn-outline-info rounded-circle" style="width: 48px; height: 48px;" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                      </button>
+                      <button class="btn btn-outline-dark rounded-circle" style="width: 48px; height: 48px;" title="Login with Email">
+                        <i class="fas fa-envelope"></i>
+                      </button>
+                    </div>
+            
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- MY MODAL FOR SIGN UP -->
+            <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content shadow-lg border-0 rounded-4" style="max-width: 550px; margin: auto;">
+                  <div class="modal-header bg-danger text-white rounded-top-4">
+                    <h5 class="modal-title"><i class="fas fa-user-plus me-2"></i>Sign Up</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body px-5 py-4">
+                    
+                    <form class="text-start">
+                      <div class="mb-3">
+                        <label class="form-label ">Username</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light"><i class="fas fa-user-tag"></i></span>
+                          <input required type="text" class="form-control" placeholder="username123">
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light"><i class="fas fa-lock"></i></span>
+                          <input required type="password" class="form-control" placeholder="••••••••">
+                        </div>
+                      </div>
+            
+                      <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
+                          <input required type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                      </div>
+            
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">Age</label>
+                          <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-hourglass-half"></i></span>
+                            <input required type="number" class="form-control" placeholder="18">
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label">Birthdate</label>
+                          <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-calendar-alt"></i></span>
+                            <input required type="date" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+        
+                      <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light"><i class="fas fa-venus-mars"></i></span>
+                          <select required class="form-select">
+                            <option disabled>Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Prefer not to say</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <div class="input-group">
+                          <span class="input-group-text bg-light"><i class="fas fa-envelope"></i></span>
+                          <input required type="email" class="form-control" placeholder="you@example.com">
+                        </div>
+                      </div>
+
+                      <button type="submit" class="btn btn-danger w-100 mt-2" >Register</button>
+                    </form>
+                    <!-- data-bs-toggle="modal" data-bs-target="#loginModal" -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+
+        <div id="myResponsiveCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#myResponsiveCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#myResponsiveCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#myResponsiveCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+    
+            <div class="carousel-inner">
+    
+                <div class="carousel-item active" data-bs-interval="5000"> 
+                    <img src="assets/r1.png" class="d-block w-100" alt="Placeholder Image 1">
+                    <div class="carousel-caption d-none d-md-block"> 
+                        <h5>VOLUNTARY PEOPLE</h5>
+                        <p>We have many voluntary people that are train and able to rescue people</p>
+                    </div>
+                </div>
+    
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="assets/r2.png" class="d-block w-100" alt="Placeholder Image 2">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>GIVING FOOD </h2>
+                        <p>Not only we rescue we also giving people a food during calamity or storm</p>
+                    </div>
+                </div>
+    
+                <div class="carousel-item"> <img src="assets/r3.png" class="d-block w-100" alt="Placeholder Image 3">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2> RESCUE MISSION</h2>
+                        <p>We are handling rescue mission when there is calamity</p>
+                    </div>
+                </div>
+                </div>
+    
+            <button class="carousel-control-prev" type="button" data-bs-target="#myResponsiveCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myResponsiveCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+<!-- ABOUT US SECTION -->
+
+      <!--       
+      <h1 class="text-center"> News and Announcement</h1>
+      <section class="container">
+        <div class="row g-5 justify-content-center"> 
+            <article class="col-md-4 col-sm-6 col-12">
+                <div class="card h-100">
+                    <img src="assets/tax.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">New Online Tax Filing System Launches Next Month</h5>
+                        <p class="card-text">Residents can now file their taxes online through the new simplified portal.</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Read more</a>
+                    </div>
+                </div>
+            </article>
+    
+            <article class="col-md-4 col-sm-6 col-12">
+                <div class="card h-100">
+                    <img src="assets/vaccine.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">COVID-19 Vaccination Centers Extend Hours</h5>
+                        <p class="card-text">Vaccination centers will now operate extended hours to accommodate more appointments.</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Read more</a>
+                    </div>
+                </div>
+            </article>
+    
+            <article class="col-md-4 col-sm-6 col-12">
+                <div class="card h-100">
+                    <img src="assets/housing.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Applications for Housing Grants Now Open</h5>
+                        <p class="card-text">Eligible citizens can apply for housing grants for the 2023-2024 period.</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Read more</a>
+                    </div>
+                </div>
+            </article> 
+        </div>
+    </section> -->
+    <div class="container my-5">
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+            <img src="assets/article1.jpg" class="card-img-top object-fit-cover" alt="Rescue Operation">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">Flood Response in Marikina</h5>
+              <p class="card-text small text-muted">May 15, 2025 · Bayanihan Aid</p>
+              <p class="card-text">Volunteers assisted in evacuating families after the Marikina River overflowed due to heavy rain.</p>
+              <a href="#" class="btn btn-danger btn-sm rounded-pill">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+            <img src="assets/article2.png" class="card-img-top object-fit-cover" alt="Relief Distribution">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">Relief Ops in Bicol Region</h5>
+              <p class="card-text small text-muted">May 13, 2025 · Bayanihan Aid</p>
+              <p class="card-text">Over 500 food packs were distributed to families affected by Typhoon Auring in Albay and Sorsogon.</p>
+              <a href="#" class="btn btn-danger btn-sm rounded-pill">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+            <img src="assets/article2.png" class="card-img-top object-fit-cover" alt="Medical Mission">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">Free Clinic in Tacloban</h5>
+              <p class="card-text small text-muted">May 10, 2025 · Bayanihan Aid</p>
+              <p class="card-text">Doctors and medics held a 2-day medical mission in Tacloban to serve over 1,000 residents.</p>
+              <a href="#" class="btn btn-danger btn-sm rounded-pill">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card shadow-sm border-0 rounded-4 h-100">
+            <img src="assets/article4.avif" class="card-img-top object-fit-cover" alt="Training Program">
+            <div class="card-body">
+              <h5 class="card-title text-primary fw-bold">Volunteer Training in Davao</h5>
+              <p class="card-text small text-muted">May 8, 2025 · Bayanihan Aid</p>
+              <p class="card-text">New recruits in Davao City completed emergency response training in coordination with local fire units.</p>
+              <a href="#" class="btn btn-danger btn-sm rounded-pill">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </main>
+
+    <footer class="text-center text-lg-start text-white bg-danger" id="footer">
+      <div class="container p-4 pb-0">
+        <section class="">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">
+                BAYANIHAN AID
+              </h6>
+              <p>
+                The BAYANIHAN AID is dedicated to providing humanitarian
+                aid and assistance to communities in need. Our mission is to
+                deliver emergency support, health services, and disaster relief,
+                ensuring the safety and well-being of those affected by crises
+                worldwide.
+              </p>
+            </div>
+            <hr class="w-100 clearfix d-md-none" />
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+              <p>
+                <i class="fas fa-home mr-3"></i> 2003 Brgy Commonwealth Quezon City
+              </p>
+              <p><i class="fas fa-envelope mr-3"></i> email@redcross.gmail</p>
+              <p><i class="fas fa-phone mr-3"></i> +63 099-823-9242</p>
+              <p> <i class="fa-solid fa-user"></i> Michael Jackson</p>
+            </div>
+
+            <hr class="w-100 clearfix d-md-none" />
+            <div class="col-md-3 mx-auto mt-3">
+              <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+              <button class="btn border rounded-circle" style="width: 48px; height: 48px;" title="Facebook" >
+                <i class="fab fa-facebook-f"></i>
+              </button>
+              <button class="btn border rounded-circle" style="width: 48px; height: 48px;" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </button>
+              <button class="btn border rounded-circle" style="width: 48px; height: 48px;" title="Youtube">
+                <i class="fab fa-youtube"></i>
+              </button>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2025 Copyright: BAYANIHAN AID 
+      </div>
+      <!-- Copyright -->
+  </footer>
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

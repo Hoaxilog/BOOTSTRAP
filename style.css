@@ -1,0 +1,47 @@
+:root {
+  --bs-primary: rgb(10, 36, 99);
+  --bs-secondary: rgb(25, 102, 179);
+  --bs-primary: #1D3557;
+  --bs-danger: #E63946;
+  --bs-light: #F1FAEE;
+  --bs-info: #A8DADC;
+  --bs-dark: #343A40;
+}
+
+.bg-primary {
+  background-color: var(--bs-primary) !important;
+}
+
+.bg-secondary {
+  background-color: var(--bs-secondary) !important;
+}
+
+.carousel-item img {
+  max-height: 600px;
+  object-fit: cover; 
+  object-position: center;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background for caption readability */
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+body {
+  background-color: var(--bs-light);
+  color: var(--bs-dark);
+}
+
+.navigation, footer {
+  background-color: var(--bs-primary);
+}
+
+.navbar-brand, .nav-link, .btn-outline-success {
+  color: white !important;
+}
+
+.btn-outline-success {
+  border-color: var(--bs-info);
+}
+

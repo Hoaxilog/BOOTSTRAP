@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.7.2-web//css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class=" navigation">
+        <nav class="container navbar navbar-expand-lg p-3">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="flex align-items-center">
+                <img
+                src="./assets/logo.png"
+                alt="logo"
+                class="image-fluid w-5"
+                style="width: 100px; height: auto"
+                />
+                <a class="navbar-brand text-white fw-bold" href="#"> </a>
+            </div>
+            <button
+                class="navbar-toggler border-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon" style="filter: brightness"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav fs-5 text-uppercase mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active text-white" aria-current="page" href="index.html" >Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Volunteer</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#about">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#footer">Contact</a>
+                </li>
+                </ul>
+                <button type="button" class="btn btn-lg bg-white text-dark px-4" data-bs-toggle="modal" data-bs-target="#loginModal">LOGIN</button>            
+                
+                <!-- MY MODAL FOR LOGIN -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content shadow-lg border-0 rounded-4" style="max-width: 500px; margin: auto;">
+                    <div class="modal-header bg-danger text-white rounded-top-4">
+                        <h5 class="modal-title"><i class="fas fa-sign-in-alt me-2"></i>Login</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body px-5 py-4">
+                        <form class="text-start">
+                        <div class="mb-3">
+                            <label for="loginUsername" class="form-label">Username</label>
+                            <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
+                            <input required type="text" class="form-control" id="loginUsername" placeholder="Enter your username">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-lock"></i></span>
+                            <input required type="password" class="form-control" id="loginPassword" placeholder="••••••••">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                            </div>
+                            <a href="#" class="text-decoration-none">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 mb-2">Login</button>
+                        <button type="button" class="btn btn-outline-secondary w-100" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+                        </form>
+                
+                        <div class="text-center my-3 text-muted">
+                        <span>or</span>
+                        </div>
+                
+                        <div class="d-flex justify-content-center gap-3">
+                        <button class="btn btn-outline-primary rounded-circle" style="width: 48px; height: 48px;" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+                        <button class="btn btn-outline-info rounded-circle" style="width: 48px; height: 48px;" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+                        <button class="btn btn-outline-dark rounded-circle" style="width: 48px; height: 48px;" title="Login with Email">
+                            <i class="fas fa-envelope"></i>
+                        </button>
+                        </div>
+                
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <!-- MY MODAL FOR SIGN UP -->
+                <div class="modal fade" id="signupModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content shadow-lg border-0 rounded-4" style="max-width: 550px; margin: auto;">
+                    <div class="modal-header bg-danger text-white rounded-top-4">
+                        <h5 class="modal-title"><i class="fas fa-user-plus me-2"></i>Sign Up</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body px-5 py-4">
+                        
+                        <form class="text-start">
+                        <div class="mb-3">
+                            <label class="form-label ">Username</label>
+                            <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-user-tag"></i></span>
+                            <input required type="text" class="form-control" placeholder="username123">
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-lock"></i></span>
+                            <input required type="password" class="form-control" placeholder="••••••••">
+                            </div>
+                        </div>
+                
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
+                            <input required type="text" class="form-control" placeholder="John Doe">
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                            <label class="form-label">Age</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-hourglass-half"></i></span>
+                                <input required type="number" class="form-control" placeholder="18">
+                            </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                            <label class="form-label">Birthdate</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light"><i class="fas fa-calendar-alt"></i></span>
+                                <input required type="date" class="form-control">
+                            </div>
+                            </div>
+                        </div>
+            
+                        <div class="mb-3">
+                            <label class="form-label">Gender</label>
+                            <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-venus-mars"></i></span>
+                            <select required class="form-select">
+                                <option disabled>Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Prefer not to say</option>
+                            </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <div class="input-group">
+                            <span class="input-group-text bg-light"><i class="fas fa-envelope"></i></span>
+                            <input required type="email" class="form-control" placeholder="you@example.com">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-danger w-100 mt-2" >Register</button>
+                        </form>
+                        <!-- data-bs-toggle="modal" data-bs-target="#loginModal" -->
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="py-5 bg-light">
+            <div class="container">
+              <div class="text-center mb-5">
+                <h2 class="text-uppercase" id="about">Who are we</h2>
+                <p class="lead mx-auto" style="max-width: 800px;">
+                    We are a volunteer-driven humanitarian organization dedicated to supporting vulnerable communities through disaster relief, medical aid, and education. Powered by compassion, not profit, we empower people to help people.                </p>
+              </div>
+          
+              <!-- HISTORY SECTION -->
+              <div class="text-center mb-5">
+                <h2 class="text-uppercase mb-3">Our History</h2>
+                <div class="mx-auto" style="max-width: 900px;">
+                    <p class="lead">
+                        Our story began in 2020 with a small team of volunteers determined to respond to emergencies in underserved areas. Since then, we've grown into a trusted local NGO, working hand in hand with communities to build resilience and save lives.                  
+                    </p>
+                </div>
+              </div>
+          
+              <!-- PHILOSOPHY SECTION -->
+              <div class="text-center mb-5">
+                <h2 class="text-uppercase mb-3">Our Philosophy</h2>
+                <p class="lead mx-auto" style="max-width: 800px;">  
+                    We believe in the power of people helping people. Every volunteer, every donation, and every effort is a step toward a more compassionate world.                </p>
+              </div>
+          
+              <!-- PHILOSOPHY VALUES -->
+              <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+                <div class="col">
+                  <div class="p-4 border rounded shadow-sm h-100 text-center bg-white">
+                    <h5 class="text-danger">Compassion</h5>
+                    <p>
+                      We respond with empathy and kindness, recognizing the dignity of every individual in crisis.
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 border rounded shadow-sm h-100 text-center bg-white">
+                    <h5 class="text-danger">Neutrality</h5>
+                    <p>
+                      We serve without discrimination, putting humanity first — not politics, sides, or opinions.
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="p-4 border rounded shadow-sm h-100 text-center bg-white">
+                    <h5 class="text-danger">Community</h5>
+                    <p>
+                      We believe lasting impact comes from empowering local people to protect and support one another.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- MISSION & VISION SECTION -->
+          <section class="py-5 bg-light">
+            <div class="container">
+              <h2 class="text-center mb-5 text-uppercase">Mission & Vision</h2>
+              <div class="row g-4">
+                <div class="col-12 col-md-6">
+                  <div class="p-4 border rounded shadow-sm h-100 bg-light text-center">
+                    <h4 class="text-danger mb-3">Our Mission</h4>
+                    <p>
+                        To mobilize volunteers and resources to respond swiftly to emergencies, provide lifesaving services, and empower communities through education and care.                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="p-4 border rounded shadow-sm h-100 bg-light text-center">
+                    <h4 class="text-danger mb-3">Our Vision</h4>
+                    <p>
+                        A world where no one faces a crisis alone where help is human and hope is shared.                   
+                     </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- CORE VALUES SECTION -->
+          <section class="py-5 bg-light">
+            <div class="container">
+              <h2 class="text-center mb-5 text-uppercase">Core Values</h2>
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="p-4 border h-100 rounded text-center bg-white">
+                    <h5 class="text-danger">Service</h5>
+                    <p>Our strength lies in action — showing up and offering help, always.</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-4 border h-100 rounded text-center bg-white">
+                    <h5 class="text-danger">Solidarity</h5>
+                    <p>We stand beside those we serve, not above them — working as one.</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-4 border h-100 rounded text-center bg-white">
+                    <h5 class="text-danger">Volunteerism</h5>
+                    <p>Driven not by duty but by compassion, we give our time for others.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-4 border h-100 rounded text-center bg-white">
+                    <h5 class="text-danger">Transparency</h5>
+                    <p>We uphold accountability in every action, partnership, and donation.</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-4 border h-100 rounded text-center bg-white">
+                    <h5 class="text-danger">Empowerment</h5>
+                    <p>We train, educate, and support communities to care for one another.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </main>
+
+    <footer class="text-center text-lg-start text-white bg-danger" id="footer">
+        <div class="container p-4 pb-0">
+          <section class="">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  BAYANIHAN AID
+                </h6>
+                <p>
+                  The BAYANIHAN AID is dedicated to providing humanitarian
+                  aid and assistance to communities in need. Our mission is to
+                  deliver emergency support, health services, and disaster relief,
+                  ensuring the safety and well-being of those affected by crises
+                  worldwide.
+                </p>
+              </div>
+              <hr class="w-100 clearfix d-md-none" />
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p>
+                  <i class="fas fa-home mr-3"></i> 2003 Brgy Commonwealth Quezon City
+                </p>
+                <p><i class="fas fa-envelope mr-3"></i> email@redcross.gmail</p>
+                <p><i class="fas fa-phone mr-3"></i> +63 099-823-9242</p>
+              </div>
+  
+              <hr class="w-100 clearfix d-md-none" />
+              <div class="col-md-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+                <button class="btn border rounded-circle" style="width: 48px; height: 48px;" title="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="btn border rounded-circle" style="width: 48px; height: 48px;" title="Twitter">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button class="btn border rounded-circle" style="width: 48px; height: 48px;" title="Youtube">
+                  <i class="fab fa-youtube"></i>
+                </button>
+                
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          © 2025 Copyright: BAYANIHAN AID 
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
